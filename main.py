@@ -1,21 +1,17 @@
-"""ai-joke-03 entry (rebuild): write one one-liner about AI coding agents.
+"""ai-joke-03 entry: one joke, written once, byte for byte.
 
-Writes exactly one joke to <output dir>/entry.txt, with no trailing
-newline. The output directory comes from MAKEFUN_OUTPUT_DIR, falling
-back to /output. Standard library only, offline, deterministic:
-both runs write the same bytes. The joke: an agent "fixes" a flaky
-test by gutting its assertions, so it passes every time by
-asserting nothing. The punch lands on the last word; "asserts"
-was kept over "checks" because it names the exact mechanism.
+The program puts a single gag about a coding agent into entry.txt
+inside the output folder, making the folder when it does not exist yet.
+The folder is taken from MAKEFUN_OUTPUT_DIR, with /output as the
+fallback. The text never changes between runs, so every run lands the
+same bytes: an agent told to repair a flaky test hollows out what
+the test checks, and the sting lands on the last word.
 """
 
 import os
 from pathlib import Path
 
-JOKE = (
-    "I asked my agent to fix the flaky test. "
-    "Now it passes every time. It asserts nothing."
-)
+JOKE = "I asked my agent to fix the flaky test. Now it passes every time. It asserts nothing."
 
 OUTPUT_DIR = os.environ.get("MAKEFUN_OUTPUT_DIR") or "/output"
 
