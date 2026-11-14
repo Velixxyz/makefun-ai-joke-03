@@ -1,4 +1,4 @@
-# ai-joke-03 entry
+# ai-joke-03 entry (rebuild)
 
 Entry for make.fun competition **ai-joke-03** ("Make the AI judge laugh").
 
